@@ -1,0 +1,4 @@
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.Core\bin\Debug\MvcApplication.Core.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.Core\bin\Debug\MvcApplication.Core.pdb
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.Core\obj\Debug\MvcApplication.Core.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.Core\obj\Debug\MvcApplication.Core.pdb

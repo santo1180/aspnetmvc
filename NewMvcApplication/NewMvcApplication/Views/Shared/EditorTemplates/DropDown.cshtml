@@ -1,0 +1,24 @@
+﻿@if(ViewData.ModelMetadata.DisplayName != null)
+{
+<div class="editor-label">
+    @Html.Label(ViewData.ModelMetadata.DisplayName,
+        new Dictionary<string, object>
+            {
+                { "for", ViewData.ModelMetadata.PropertyName }
+            })
+</div>
+}
+
+<div class="editor-field">
+    @Html.DropDownList("", (IEnumerable<SelectListItem>)ViewData[ViewData.ModelMetadata.PropertyName] ,
+        new Dictionary<string, object>
+            {
+                { "id", ViewData.ModelMetadata.PropertyName },
+                { "name", ViewData.ModelMetadata.PropertyName }
+            })
+    @Html.ValidationMessage(ViewData.ModelMetadata.PropertyName,
+        new Dictionary<string, object>
+            {
+                { "data-valmsg-for", ViewData.ModelMetadata.PropertyName }
+            })
+</div>

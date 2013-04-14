@@ -1,0 +1,75 @@
+﻿@model NewMvcApplication.Models.Person
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Person</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FaceBookId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FaceBookId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TwitterId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TwitterId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LinkedInId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LinkedInId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BlogUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BlogUrl)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

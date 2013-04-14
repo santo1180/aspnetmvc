@@ -1,0 +1,127 @@
+﻿@model NewMvcApplication.Models.Person
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<input type="button" value="Create New Person" title="Create New Person" data-bind="click:createnew" />
+
+<div id="grid" ></div>  
+
+<table style="width:700px" >
+    <tr> 
+        <th> Id</th>
+        <th > First Name</th>
+        <th > MI</th>
+        <th > Last Name</th>
+        <th > FaceBook Id</th>
+        <th > Email</th>
+        <th > Twitter Id</th>
+        <th > LinkedIn Id</th>
+        <th > Blog Url</th>
+    </tr>
+    
+    <tbody data-bind="foreach: Persons">
+        <tr>
+            <td  style="width:70px" >
+                <a data-bind="text: Id, click:$parent.editPerson"></a>
+            </td>
+            <td  style="width:70px" data-bind="text: FirstName"></td>
+            <td  style="width:70px" data-bind="text: MI"></td>
+            <td  style="width:70px" data-bind="text: LastName"></td>
+            <td  style="width:70px" data-bind="text: FaceBookId"></td>
+            <td  style="width:70px" data-bind="text: Email"></td>
+            <td  style="width:70px" data-bind="text: TwitterId"></td>
+            <td  style="width:70px" data-bind="text: LinkedInId"></td>
+            <td  style="width:70px" data-bind="text: BlogUrl"></td>
+        </tr>
+    </tbody>
+</table>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset data-bind='with: addeditrow'>
+        <legend>Person</legend>
+
+        @Html.HiddenFor(model => model.Id, NewMvcApplication.Core.EditorTemplate.TextBox)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MI, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FaceBookId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FaceBookId, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TwitterId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TwitterId, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LinkedInId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LinkedInId, NewMvcApplication.Core.EditorTemplate.TextBox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BlogUrl)
+        </div>
+        
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BlogUrl, NewMvcApplication.Core.EditorTemplate.TextBox)
+            
+        </div>
+
+        <p>
+           <input type="button" value="Update" data-bind="click: $parent.updaterow" />
+        </p>
+    </fieldset>
+    
+    
+}
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Persons.js" ></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/PersonGrid.js" ></script>  
+}

@@ -1,0 +1,11 @@
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\MvcApplication.DAL.dll.config
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\MvcApplication.DAL.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\MvcApplication.DAL.pdb
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\DataAnnotationsExtensions.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\EntityFramework.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\MvcApplication.Core.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\MvcApplication.Core.pdb
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\bin\Debug\EntityFramework.xml
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
+D:\Users\santosh\Documents\Visual Studio 2012\Projects\NewMvcApplication\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb

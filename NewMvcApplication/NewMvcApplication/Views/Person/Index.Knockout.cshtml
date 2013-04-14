@@ -1,0 +1,58 @@
+﻿@model NewMvcApplication.Models.Person
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<input type="button" value="Create New Person" title="Create New Person" data-bind="click:createnew" />
+
+<table style="width:700px" >
+    <tr> 
+        <th> Id</th>
+        <th > First Name</th>
+        <th > MI</th>
+        <th > Last Name</th>
+        <th > FaceBook Id</th>
+        <th > Email</th>
+        <th > Twitter Id</th>
+        <th > LinkedIn Id</th>
+        <th > Blog Url</th>
+    </tr>
+    
+    <tbody data-bind="foreach: Persons">
+        <tr>
+            <td  style="width:70px" >
+                <a data-bind="text: Id, click:$parent.editPerson"></a>
+            </td>
+            <td  style="width:70px" data-bind="text: FirstName"></td>
+            <td  style="width:70px" data-bind="text: MI"></td>
+            <td  style="width:70px" data-bind="text: LastName"></td>
+            <td  style="width:70px" data-bind="text: FaceBookId"></td>
+            <td  style="width:70px" data-bind="text: Email"></td>
+            <td  style="width:70px" data-bind="text: TwitterId"></td>
+            <td  style="width:70px" data-bind="text: LinkedInId"></td>
+            <td  style="width:70px" data-bind="text: BlogUrl"></td>
+        </tr>
+    </tbody>
+    <tr data-bind='with: addeditrow''>
+            <td  style="width:70px"> <input type="hidden"  style="width:70px"  data-bind="value: Id"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: FirstName"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: MI"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: LastName"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: FaceBookId"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: Email"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: TwitterId"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: LinkedInId"/></td>
+            <td  style="width:70px"> <input  style="width:70px" type="text" data-bind="value: BlogUrl"/></td>
+            <td style="width:70px"> <input type="button" value="Update" data-bind="click: $parent.updaterow" /> </td>
+    </tr>
+    
+</table>
+
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Persons.js" ></script>
+}

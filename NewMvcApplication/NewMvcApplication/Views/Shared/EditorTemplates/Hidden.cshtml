@@ -1,0 +1,9 @@
+﻿<div class="editor-field">
+    @Html.Hidden("", (object)Model,
+        new Dictionary<string, object>
+            {
+                { "id", ViewData.ModelMetadata.PropertyName },
+                { "name", ViewData.ModelMetadata.PropertyName },
+                { "data-bind", "value: " + ViewData.ModelMetadata.PropertyName },
+            })
+</div>

@@ -1,0 +1,25 @@
+﻿@model NewMvcApplication.Models.Person
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+
+
+<div id="grid" ></div>
+
+
+
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Persons.js" ></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/PersonGrid.js" ></script>  
+}
